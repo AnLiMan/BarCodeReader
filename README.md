@@ -2,13 +2,21 @@
 
 ## Установка библиотек
 pip install python-barcode
+
 pip install pyzbar
+
 pip install opencv-python
+
 pip install pyserial
+
 pip install numpy
+
 pip install colorama
+
 pip install art
+
 pip install opencv-python
+
 pip install openpyxl
 
 ## Материал для чтения
