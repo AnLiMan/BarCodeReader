@@ -69,31 +69,6 @@
       <pointsize>14</pointsize>
      </font>
     </property>
-    <item>
-     <property name="text">
-      <string>102 ТЭОЭ</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>101</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>103</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>104</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>105</string>
-     </property>
-    </item>
    </widget>
    <widget class="QPushButton" name="CodeGenerate">
     <property name="geometry">
