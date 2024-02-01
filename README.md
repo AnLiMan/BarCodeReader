@@ -1,8 +1,9 @@
 # BarCodeReader
 Проект по чтению и генерации штрих-кодов на python. Для генерации штрих-кодов разработан специальный интерфейс: 
-
+![Screen1](https://github.com/AnLiMan/BarCodeReader/blob/main/Screens/Screen1.png)
 
 введённые данные сохраняются в excel-файл:
+![Screen1](https://github.com/AnLiMan/BarCodeReader/blob/main/Screens/Screen2.jpg)
 
 а штрих-код сохраняется в виде отдельного файла. Интерфейс разработан в QT-Designer
 
