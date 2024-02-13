@@ -9,8 +9,7 @@ void setup() {
   pinMode(Action1, OUTPUT);
   pinMode(Action2, OUTPUT);
   pinMode(Action3, OUTPUT);
-
-  Serial.setTimeout(1);
+  pinMode(13, OUTPUT);
 
   digitalWrite(Action1, LOW);
   digitalWrite(Action2, LOW);
@@ -18,26 +17,27 @@ void setup() {
 }
 
 void loop() {
-  while (!Serial.available());
-  data = Serial.readString().toInt();
-  Serial.print(data);
-  
-  //Если приняли ноль
-  if (data == 0) {
-    digitalWrite(Action1, HIGH);
-    digitalWrite(Action2, LOW);
-    digitalWrite(Action3, LOW);
-  }
-  //Если приняли 1
-  else if (data == 1) {
-    digitalWrite(Action1, LOW);
-    digitalWrite(Action2, HIGH);
-    digitalWrite(Action3, LOW);
-  }
-   //Если приняли 2
-  else if (data == 2) {
-    digitalWrite(Action1, LOW);
-    digitalWrite(Action2, LOW);
-    digitalWrite(Action3, HIGH);
+  if (Serial.available() > 0) {
+    data = Serial.read();
+
+    //Если приняли ноль
+    if (data == '0') {
+      digitalWrite(Action1, HIGH);
+      digitalWrite(Action2, LOW);
+      digitalWrite(Action3, LOW);
+    }
+    //Если приняли 1
+    else if (data == '1') {
+      digitalWrite(Action1, LOW);
+      digitalWrite(Action2, HIGH);
+      digitalWrite(Action3, LOW);
+    }
+    //Если приняли 2
+    else if (data == '2') {
+      digitalWrite(Action1, LOW);
+      digitalWrite(Action2, LOW);
+      digitalWrite(Action3, HIGH);
+      digitalWrite(13, HIGH);
+    }
   }
 }
