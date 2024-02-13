@@ -10,8 +10,8 @@ import art #Тоже для красивого текста
 import openpyxl #Для работы с excel-файлами
 
 #----Постоянные----
-ArduinoControl = False #Вывод сигналов на последовательный порт
-ArduinoPort = 'COM6' #Порт с подключенной дуиной
+ArduinoControl = True #Вывод сигналов на последовательный порт
+ArduinoPort = 'COM5' #Порт с подключенной дуиной
 ArduinoSpeed = 19200 #Скорость передачи данных в бодах
 
 CheckCode = "Codes/IvanVas1.png" #Код для проверки без камеры 1
@@ -92,8 +92,8 @@ def BarcodeReader():
 
 #Отправка данных по последовательному порту на Ардуино
 def SendData(x):
-    ser.write(bytes(x, 'utf-8'))
-    print(cl.Fore.BLACK + f"Bytes: {bytes(x, 'utf-8')}")
+    ser.write(x)
+    print(cl.Fore.BLACK + f"Bytes: {x}")
     time.sleep(0.05)
     data = ser.readline()
     print(cl.Fore.BLACK + f"Data: {data}")
